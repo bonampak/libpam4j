@@ -24,7 +24,9 @@
 package org.jvnet.libpam;
 
 import org.junit.*;
-import junit.framework.Assert;
+
+import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertNotNull;
 
 public class UnixUserTest {
     private UnixUser user = null;
@@ -36,16 +38,16 @@ public class UnixUserTest {
 
     @Test
     public void testGetUserName() {
-        Assert.assertEquals("root", user.getUserName());
+        assertEquals("root", user.getUserName());
     }
 
     @Test
     public void testGetDir() {
-        Assert.assertNotNull(user.getDir());
+        assertNotNull(user.getDir());
     }
 
     @Test
     public void testGetUID() {
-        Assert.assertEquals(0, user.getUID());
+        assertEquals(0, user.getUID());
     }
 }
